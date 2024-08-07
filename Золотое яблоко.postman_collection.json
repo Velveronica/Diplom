@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "b9f7f2f2-5ec4-44e6-9ef6-8358899398fb",
+		"name": "Золотое яблоко",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32872514"
+	},
+	"item": [
+		{
+			"name": "Избранное",
+			"item": [
+				{
+					"name": "Добавление в избранное",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"products\":[\"19000014284\"]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://goldapple.ru/front/api/user/favorites/products"
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление из избранного",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://goldapple.ru/front/api/user/favorites/products?products[]=19000014284",
+							"protocol": "https",
+							"host": [
+								"goldapple",
+								"ru"
+							],
+							"path": [
+								"front",
+								"api",
+								"user",
+								"favorites",
+								"products"
+							],
+							"query": [
+								{
+									"key": "products[]",
+									"value": "19000014284"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Профиль",
+			"item": [
+				{
+					"name": "Данные о заказах",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Корзина",
+			"item": [
+				{
+					"name": "Добавление в корзину",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "https://goldapple.ru/front/api/analytics/item/add"
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление из корзины",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "шам",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://goldapple.ru/front/api/search/autocomplete?query=%D1%88%D0%B0%D0%BC&cityId=8dea00e3-9aab-4d8e-887c-ef2aaa546456&geoPolygons[]=EKB-000000402&geoPolygons[]=EKB-000000400&geoPolygons[]=EKB-000000401&geoPolygons[]=EKB-000000399&customerGroupId=7",
+					"protocol": "https",
+					"host": [
+						"goldapple",
+						"ru"
+					],
+					"path": [
+						"front",
+						"api",
+						"search",
+						"autocomplete"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "%D1%88%D0%B0%D0%BC"
+						},
+						{
+							"key": "cityId",
+							"value": "8dea00e3-9aab-4d8e-887c-ef2aaa546456"
+						},
+						{
+							"key": "geoPolygons[]",
+							"value": "EKB-000000402"
+						},
+						{
+							"key": "geoPolygons[]",
+							"value": "EKB-000000400"
+						},
+						{
+							"key": "geoPolygons[]",
+							"value": "EKB-000000401"
+						},
+						{
+							"key": "geoPolygons[]",
+							"value": "EKB-000000399"
+						},
+						{
+							"key": "customerGroupId",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dolce'gabbana",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://goldapple.ru/front/api/search/autocomplete?query=dolce'gabbana&cityId=8dea00e3-9aab-4d8e-887c-ef2aaa546456&geoPolygons[]=EKB-000000402&geoPolygons[]=EKB-000000400&geoPolygons[]=EKB-000000401&geoPolygons[]=EKB-000000399",
+					"protocol": "https",
+					"host": [
+						"goldapple",
+						"ru"
+					],
+					"path": [
+						"front",
+						"api",
+						"search",
+						"autocomplete"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "dolce'gabbana"
+						},
+						{
+							"key": "cityId",
+							"value": "8dea00e3-9aab-4d8e-887c-ef2aaa546456"
+						},
+						{
+							"key": "geoPolygons[]",
+							"value": "EKB-000000402"
+						},
+						{
+							"key": "geoPolygons[]",
+							"value": "EKB-000000400"
+						},
+						{
+							"key": "geoPolygons[]",
+							"value": "EKB-000000401"
+						},
+						{
+							"key": "geoPolygons[]",
+							"value": "EKB-000000399"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "шампунь",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://goldapple.ru/front/api/search/autocomplete?query=%D1%88%D0%B0%D0%BC%D0%BF%D1%83%D0%BD%D1%8C&cityId=0c5b2444-70a0-4932-980c-b4dc0d3f02b5&geoPolygons[]=EKB-000000360&geoPolygons[]=EKB-000000367&geoPolygons[]=EKB-000000347&geoPolygons[]=EKB-000000356&customerGroupId=7",
+					"protocol": "https",
+					"host": [
+						"goldapple",
+						"ru"
+					],
+					"path": [
+						"front",
+						"api",
+						"search",
+						"autocomplete"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "%D1%88%D0%B0%D0%BC%D0%BF%D1%83%D0%BD%D1%8C"
+						},
+						{
+							"key": "cityId",
+							"value": "0c5b2444-70a0-4932-980c-b4dc0d3f02b5"
+						},
+						{
+							"key": "geoPolygons[]",
+							"value": "EKB-000000360"
+						},
+						{
+							"key": "geoPolygons[]",
+							"value": "EKB-000000367"
+						},
+						{
+							"key": "geoPolygons[]",
+							"value": "EKB-000000347"
+						},
+						{
+							"key": "geoPolygons[]",
+							"value": "EKB-000000356"
+						},
+						{
+							"key": "customerGroupId",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "access_token",
+			"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkE4QTdDRDBFNjE0REQxNzE1OTU0ODZCNjA5MjNDMTBCRDYyMDZGMTRSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6InFLZk5EbUZOMFhGWlZJYTJDU1BCQzlZZ2J4USJ9.eyJuYmYiOjE3MjI1MDMzNzMsImV4cCI6MTc1NDAzOTM3MywiaXNzIjoiaHR0cHM6Ly9wbGFpZC5nb2xkYXBwbGUucnUiLCJhdWQiOiJJbnRlcm5hbEFQSSIsImNsaWVudF9pZCI6ImNsaWVudF93ZWIiLCJzdWIiOiI3OTUxMzk4OTc4MSIsImF1dGhfdGltZSI6MTcyMjUwMzM3MywiaWRwIjoicGhvbmVfc21zX3Rva2VuIiwibWFnZW50b19pZCI6IjE0NjU0ODUxIiwiY3VzdG9tZXJfaWQiOiIzOThkZDFmNi1iMzQ1LWVhMTEtYjgwNy1iOTk4ZDFiMTg0YTEiLCJjdXN0b21lcl9waG9uZSI6Ijc5NTEzOTg5NzgxIiwiY3VzdG9tZXJfaXNfcmVnaXN0ZXJlZCI6IjEiLCJjdXN0b21lcl9ncm91cF9pZCI6IjciLCJqdGkiOiIyQjM5QzlCNUY4RENDQkMyQzkyMkRFMzVERjEzQ0UzMSIsImlhdCI6MTcyMjUwMzM3Mywic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSIsIldlYkFQSSIsIm9mZmxpbmVfYWNjZXNzIl19.yp69dzrq2paY8dUnJXzrDXK1ce1mngosmKlqcRWKGc45kcNqcmVgOoHFut6qNo43Wwk5lHFHf8hKJ64u365W_MyzroTTnkn7XJKFmSyEXLEIR18BAoycZoqF89dMy2Jpo0zDtQYMm2-UopuFy1yjgns-jc7RFozzV4trcs41UXIy-1qBdTrRoW5WujgjzO8L8faDp0zuc2uZgwm-yRtNnB15G0Tptlik9fOeTFtmdpsDcjS5I4kalBZ7k_hV7tdsKUQJjAOQn5xiC9GoCh2HLO2m5xPAPCkFIWtsemS33IqADr9THP1uCC96FrH9nl2vVMHFcyKVdqsaergQiUITRrAkl9h8Q7DaH7fPSmYClRU8u-u2q6i-EpfBpzBaqLUDbZ4qa6aFga-p9I8d9eOez7pE3BbMM1T4jWnYW7lcaE5G2aUUhzvMxTPo9ugRrd_vD69219jZo-jyVaxmjPaOilZJPwXSRpKWnYUth8RrDDhgym8t6o13_OiRGv0gAenC34nJcTCgWw6vRV1qnUtxVTx68eGd4eBxORlPU3sgzyVYrGoyY9bD-Hg_DXo7fP2fF4cClMA3CGeaUOB-8LMOtV5Gzcz16tncNGv4fGvk8msmPvqo6Dw2OgmYa61djK30EXxywBTYfdZocMPaLFcCv9vquCQeNwp51LEErGC2AiA",
+			"type": "string"
+		},
+		{
+			"key": "refresh_token",
+			"value": "885103CB6E2B1144FC4DFB948C2BD4224E6B4300ABFE6E86C01673B9C023ADC5",
+			"type": "string"
+		}
+	]
+}
