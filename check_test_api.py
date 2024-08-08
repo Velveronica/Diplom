@@ -10,8 +10,11 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 
         
+        
+def test_film():
+    f_api="https://api.kinopoisk.dev/v1.4/movie/968031"
+    headers={"accept": "application/json", 
+                      'X-API-KEY': 'Q2307CQ-8Z941Y0-MBABRX0-YAC4QQD'}
+    resp=requests.get(f_api, headers=headers)
+    assert resp.status_code==200
 
-
-sh_api="https://goldapple.ru/front/api/search/autocomplete?query=%D1%88%D0%B0%D0%BC%D0%BF%D1%83%D0%BD%D1%8C&cityId=8dea00e3-9aab-4d8e-887c-ef2aaa546456&geoPolygons[]=EKB-000000402&geoPolygons[]=EKB-000000400&geoPolygons[]=EKB-000000401&geoPolygons[]=EKB-000000399&customerGroupId=7"
-resp=requests.get(sh_api)
-print(resp.json())
